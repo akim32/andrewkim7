@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Myapp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <!-- Warning !! ensure that "stylesheet_pack_tag" is used, line below -->
+    <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+</script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <img src="https://media-exp1.licdn.com/dms/image/C5603AQHxuoGZJYH4Gg/profile-displayphoto-shrink_200_200/0/1517624529226?e=1632960000&v=beta&t=KeJq466QyQt2pIe72hdCCM6UG7Vevs3kXtEFtIXlxEg" class="rounded-circle float-start img-thumbnail" width="20%" style="margin: 0px 15px 0px 0;">
+          <h4 class="text-left">
+            andrew.kim7@parthenon.ey.com
+          </h4>
+          <p class="lead text-muted">IBC for Innventure Program Rotation between 9/20. Today's date:asd <span id="demo"></span></p>
+        </div>
+      </div>
+    </nav>
+    <div class="container">
+      <%= yield %>
+    </div>
+  </body>
+</html>
