@@ -9,8 +9,25 @@
     <!-- Warning !! ensure that "stylesheet_pack_tag" is used, line below -->
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-</script>
+    <script src="https://kit.fontawesome.com/5cb1ecfd65.js" crossorigin="anonymous"></script> <!-- font awesome -->
+  </script>
+  
+  
+  <script>
+      
+      var myVar = setInterval(myTimer, 1000);
+      function myTimer() {
+        var d = new Date();
+        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+      }
+      
+      var intervalWork = setInterval(function() {
+          var elapsedTimeWork = Date.now() - <%= @company_seconds %>;
+          document.getElementById("timerWork").innerHTML = Math.floor(elapsedTimeWork / 1000 / (60*60*24*30)) + "M:" + Math.floor(elapsedTimeWork / 1000 / (60*60*24)%30) + "D"  + "H:"  + Math.floor(elapsedTimeWork / 1000 / (60)%60) + "M:" + (elapsedTimeWork / 1000 % 60).toFixed(0) + "S";
+      }, 1000);
+      
+  </script>
+  
   </head>
 
   <body>
@@ -22,7 +39,7 @@
           <h4 class="text-left">
             andrew.kim7@parthenon.ey.com
           </h4>
-          <p class="lead text-muted">IBC for Innventure Program Rotation between 9/20. Today's date:asd <span id="demo"></span></p>
+          <p class="text-muted">IBC for rotation program starting 9/20. Current time: <span id="demo"></span></p>
         </div>
       </div>
     </nav>
