@@ -18,7 +18,7 @@
       var myVar = setInterval(myTimer, 1000);
       function myTimer() {
         var d = new Date();
-        document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        document.getElementById("demo").innerHTML = d.toLocaleDateString() + " " + d.toLocaleTimeString();
       }
       
       var intervalWork = setInterval(function() {
@@ -37,9 +37,9 @@
         <div class="navbar-header">
           <img src="https://media-exp1.licdn.com/dms/image/C5603AQHxuoGZJYH4Gg/profile-displayphoto-shrink_200_200/0/1517624529226?e=1632960000&v=beta&t=KeJq466QyQt2pIe72hdCCM6UG7Vevs3kXtEFtIXlxEg" class="rounded-circle float-start img-thumbnail" width="20%" style="margin: 0px 15px 0px 0;">
           <h4 class="text-left">
-            andrew.kim7@<span class="text-primary">parthenon</span>.<span class="text-warning">ey</span>.com
+            andrew.kim7@parthenon.ey.com
           </h4>
-          <p class="text-muted">IBC submission for Innventure Rotation Program starting 9/20. Current time: <span id="demo"></span></p>
+          <p class="text-muted">IBC submission for Innventure Rotation Program starting on September 20th, 2021.  Current date & time: <span id="demo" class="debug"></span></p>
         </div>
       </div>
     </nav>
